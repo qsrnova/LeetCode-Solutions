@@ -1,0 +1,8 @@
+public class Solution {
+    public int MaximumProduct(int[] nums) {
+        Array.Sort(nums);
+        var numMin = nums[0] * nums[1] * nums[^1];
+        var numMax = nums[^1] * nums[^2] * nums[^3];
+        return numMin > numMax ? numMin : numMax;
+    }
+}

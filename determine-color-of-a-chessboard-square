@@ -1,0 +1,50 @@
+public class Solution {
+    public bool SquareIsWhite(string coordinates) {
+        char[] values = {'a', 'c', 'e', 'g'};
+        Boolean contain;
+        Boolean contain_a = coordinates.Contains(values[0]);
+        Boolean contain_c = coordinates.Contains(values[1]);
+        Boolean contain_e = coordinates.Contains(values[2]);
+        Boolean contain_g = coordinates.Contains(values[3]);
+        
+        if(contain_a == true || contain_c == true || contain_e == true || contain_g == true){
+            contain = true;
+        }
+        else{
+            contain = false;
+        }
+
+        Boolean even;
+        
+        if(coordinates[1] % 2 == 0){
+            even = true;
+        }
+        else{
+            even = false;
+        }
+
+        if(contain == true){
+            if(even == true){
+                return true;
+            }
+            if(even == false){
+                return false;
+            }
+        }
+
+        if(contain == false){
+            if(even == true){
+                return false;
+            }
+            if(even == false){
+                return true;
+            }
+        }
+
+        return false;
+           
+        
+
+
+    }
+}

@@ -1,0 +1,20 @@
+using System.Linq;
+
+public class Solution {
+    public double Average(int[] salary) {
+        //sort array
+        Array.Sort(salary);
+
+        //calculate sum of array
+        double total = salary.Sum();
+
+        //minus min and max salary
+
+        double totalExcluded = salary[0] + salary[salary.Length - 1];
+        
+        //divide by length of array - 2
+        double averageSalary = (total - totalExcluded) / (salary.Length - 2);
+
+        return averageSalary;
+    }
+}

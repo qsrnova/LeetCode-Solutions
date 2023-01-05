@@ -1,0 +1,19 @@
+public class Solution {
+    public int SubtractProductAndSum(int n) {
+        int product = Product(n);
+        int sum = Sum(n);
+        return product-sum;
+    
+    int Product(int n)
+    {
+      if(n == 0) return 1;
+      return n%10 * Product(n/10);
+    }
+
+    int Sum(int n)
+    {
+       if(n == 0) return 0;
+      return n%10 + Sum(n/10);     
+    }
+  }
+}

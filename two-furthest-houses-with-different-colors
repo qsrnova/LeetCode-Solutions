@@ -1,0 +1,19 @@
+public class Solution {
+    public int MaxDistance(int[] colors) {
+        int maxDistance = 1;
+        for(int i = 0; i < colors.Length; i++){
+            int j = 0;
+
+            while(j < colors.Length){
+                if(colors[i] != colors[j]){
+                    if(maxDistance < Math.Abs(j-i)){
+                        maxDistance = Math.Abs(j-i);
+                    }
+                }
+                j++;
+            }
+
+        }
+        return maxDistance;
+    }
+}

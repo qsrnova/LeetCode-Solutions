@@ -1,0 +1,7 @@
+public class Solution {
+    public string ToLowerCase(string s) {
+        string lowerCase = s.ToLower();
+
+        return lowerCase;
+    }
+}
